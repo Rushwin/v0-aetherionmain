@@ -42,39 +42,26 @@ export function SymposiumHero() {
             </Button>
           </div>
 
+          <div className="mt-16 text-center">
+            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-balance text-white">
+              AI Technologies Showcase
+            </h2>
+            <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto text-pretty">
+              Explore the transformative power of Machine Learning, Natural Language Processing, and Computer Vision in
+              modern industries
+            </p>
+          </div>
+
           {/* Event highlights grid */}
           <div className="mt-12 w-full max-w-4xl">
-            <div className="relative rounded-[28px] glass-border bg-neutral-900 p-4">
-              <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black">
-                <LazyVideo
-                  src="/ai-technologies-showcase-comprehensive.mp4"
-                  className="absolute inset-0 h-full w-full object-cover"
-                  autoplay={true}
-                  loop={true}
-                  muted={true}
-                  playsInline={true}
-                  aria-label="AI Technologies Showcase - Machine Learning, NLP, and Computer Vision"
-                />
-
-                {/* Video overlay with dynamic content */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-white">AI Technologies Showcase</h3>
-                    <p className="text-white/80 text-sm">
-                      Explore the transformative power of Machine Learning, Natural Language Processing, and Computer
-                      Vision in modern industries
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {aiTechnologies.map((tech, index) => (
                 <div key={index} className="relative group">
                   <div className="relative rounded-2xl glass-border bg-neutral-900/50 p-6 hover:bg-neutral-800/50 transition-all duration-300">
+                    <div className="text-center mb-4">
+                      <h3 className="text-xl font-extrabold tracking-tight text-white">{tech.title}</h3>
+                    </div>
+
                     <div className="relative aspect-square w-full mb-4 overflow-hidden rounded-xl">
                       <img
                         src={tech.image || "/placeholder.svg"}
@@ -109,6 +96,10 @@ export function SymposiumHero() {
               {/* Future AI technology card */}
               <div className="relative group">
                 <div className="relative rounded-2xl glass-border bg-neutral-900/50 p-6 hover:bg-neutral-800/50 transition-all duration-300">
+                  <div className="text-center mb-4">
+                    <h3 className="text-xl font-extrabold tracking-tight text-white">Future AI</h3>
+                  </div>
+
                   <div className="relative aspect-square w-full mb-4 overflow-hidden rounded-xl">
                     <img
                       src={futureAiTechnology.image || "/placeholder.svg"}
@@ -190,37 +181,6 @@ function EventCard({
     </div>
   )
 }
-
-const eventHighlights = [
-  {
-    title: "AI Tech",
-    sub: "Machine Learning & Neural Networks",
-    tone: "ai-ml",
-    gradient: "from-[#0b0b0b] via-[#1e1b4b] to-[#312e81]",
-    videoSrc: "/ai-machine-learning-neural-networks-visualization-.jpg",
-  },
-  {
-    title: "NLP",
-    sub: "Natural Language Processing",
-    tone: "ai-nlp",
-    gradient: "from-[#0b1a0b] via-[#065f46] to-[#064e3b]",
-    videoSrc: "/natural-language-processing-ai-with-text-analysis-.jpg",
-  },
-  {
-    title: "Vision",
-    sub: "Computer Vision & Recognition",
-    tone: "ai-vision",
-    gradient: "from-[#001028] via-[#7c2d12] to-[#991b1b]",
-    videoSrc: "/computer-vision-ai-with-image-recognition-object-d.jpg",
-  },
-  {
-    title: "Future",
-    sub: "Transforming Industries",
-    tone: "ai-future",
-    gradient: "from-[#0b0b0b] via-[#581c87] to-[#6b21a8]",
-    videoSrc: "/ai-transforming-industries-with-futuristic-technol.jpg",
-  },
-]
 
 const aiTechnologies = [
   {
