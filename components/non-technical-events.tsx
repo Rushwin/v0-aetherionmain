@@ -10,9 +10,10 @@ export function NonTechnicalEvents() {
       id: 1,
       title: "Bomb Squad",
       subtitle: "Game Tournament",
-      emoji: "🎮",
+      emoji: "/images/bomb-logo.jpeg",
+      isImage: true, // Flag to indicate this is an image instead of emoji
       time: "14:00 - 16:00",
-      location: "Gaming Arena",
+      location: "AI&DS Block",
       description: "High-energy gaming event in knockout format.",
       details: [
         "⚔ 8 teams → Quarters → Semis → Finals",
@@ -23,11 +24,11 @@ export function NonTechnicalEvents() {
     },
     {
       id: 2,
-      title: "Noise vs. Voice",
+      title: "Noise Vs Voice",
       subtitle: "Communication Challenge",
       emoji: "🔊",
       time: "16:30 - 18:00",
-      location: "Activity Hall",
+      location: "AI&DS Block",
       description:
         "Multi-round challenge where participants distinguish between noise and meaningful voice across various scenarios, including lip-reading challenges.",
       details: [
@@ -55,11 +56,11 @@ export function NonTechnicalEvents() {
     },
     {
       id: 3,
-      title: "Guess the Word",
+      title: "guess the sketch",
       subtitle: "Blind Drawing",
       emoji: "✏️",
       time: "18:30 - 20:00",
-      location: "Creative Studio",
+      location: "AI&DS Block",
       description: "Creativity & chaos guaranteed!",
       details: [
         "🙈 One teammate is blindfolded & must draw the word",
@@ -74,7 +75,7 @@ export function NonTechnicalEvents() {
       subtitle: "Cricket Team Building",
       emoji: "🏏",
       time: "20:30 - 22:00",
-      location: "Auction Hall",
+      location: "AI&DS Block",
       description: "Build your dream cricket team!",
       details: [
         "🎤 Teams act as franchise owners",
@@ -82,14 +83,34 @@ export function NonTechnicalEvents() {
         "🏆 Strongest roster wins!",
       ],
       skills: "Strategy, Budgeting, Negotiation, Decision Making",
+      fullDescription: `**🏏 IPL Auction Rules**
+
+**Rule 1:** Each team must build a squad of 11 players within their purse of ₹50 Crores.
+
+**Rule 2:** Each squad must include a minimum of 3 batsmen, 3 bowlers, 1 wicketkeeper, and 1 all-rounder.
+
+**Rule 3:** A special Steal Card will also be auctioned. This card allows the team to steal a player from another franchise at the same price that was originally paid.
+
+**Rule 4:** A Hidden Card will be introduced. In this case, only the role of the player will be revealed during the bidding. The actual player's name will be disclosed only after the bidding is completed.
+
+**Rule 5:** Every player will have a base price according to their potential.
+
+---
+
+**🏆 Winning Criteria**
+
+Each player carries a credit score based on their last 5 years of IPL performance.
+
+The franchise whose playing XI has the highest total credit score will be declared the winner.`,
     },
     {
       id: 5,
       title: "Free Fire",
       subtitle: "Battle Royale Championship",
-      emoji: "🎮",
+      emoji: "/images/garena-logo.jpeg",
+      isImage: true, // Flag to indicate this is an image instead of emoji
       time: "10:00 - 12:00",
-      location: "Gaming Arena",
+      location: "AI&DS Block",
       description:
         "Dynamic battle royale competition featuring Garena Free Fire where participants compete to demonstrate their skills and strategies.",
       details: [
@@ -99,15 +120,33 @@ export function NonTechnicalEvents() {
         "📱 Mobile gaming competition",
       ],
       skills: "Quick Reflexes, Strategic Thinking, Team Coordination",
-      fullDescription: `**Event Overview:** Participants will compete in a dynamic Free Fire environment to demonstrate their skills and strategies. This high-energy battle royale competition will test players' survival instincts and tactical abilities.
+      fullDescription: `**Event Overview:** Full map match conducted with teams competing for top positions. Those who listed in top two advance to the final clash squad match.
 
-**Game Format:** Teams compete in classic Free Fire battle royale matches with elimination-style progression.
+**General Rules:**
+• Full map match conducted
+• Those who listed in top two are selected for clash squad match
+• All final decisions are decided by the organizers and coordinators (no arguments)
+• If any player or team involves in arguments with other teams, the whole team will be eliminated
 
-**Rules & Regulations:** Detailed rules for this segment will be provided on-site to ensure an engaging and competitive atmosphere. All participants must follow fair play guidelines and tournament regulations.
+**BR MATCH RULES:**
+1. Top two teams selected based on points
+2. Points are calculated as:
+   • Each kill - 5 points
+   • Booyah - 10 points
+3. If points are tied between two teams, we conduct (4-round) clash squad match
+4. No panel, No emulator
+5. If any player in a team is caught in suspicious activity (panel, hack), the whole team will be eliminated
+6. All final decisions are decided by the organizers and coordinators (no objection)
 
-**Equipment:** Gaming devices will be provided, or participants may use their own mobile devices with Free Fire installed.
+**CLASH SQUAD RULES:**
+1. Players are restricted to use grenades, smoke bombs (all other rules are allowed)
+2. No gun skins, No character skill
+3. No panel users, No emulator
+4. If any player in a team is caught in suspicious activity (panel, hack), the whole team will be eliminated
+5. The total number of rounds adjusted by the organizers and coordinators
+6. Which team has won the match they are considered as winners
 
-**Judging:** Winners determined by in-game performance and survival rankings.`,
+**Equipment:** Participants may use their own mobile devices with Free Fire installed.`,
     },
   ]
 
@@ -138,9 +177,19 @@ export function NonTechnicalEvents() {
 
           <div className="glass-border-enhanced rounded-2xl p-8">
             <div className="text-center mb-8">
-              <div className="text-8xl mb-6" style={{ color: "#ffffff", textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}>
-                {event.emoji}
-              </div>
+              {event.isImage ? (
+                <div className="mb-6">
+                  <img
+                    src={event.emoji || "/placeholder.svg"}
+                    alt="Garena Logo"
+                    className="w-24 h-24 mx-auto object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="text-8xl mb-6" style={{ color: "#ffffff", textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}>
+                  {event.emoji}
+                </div>
+              )}
               <h2 className="text-4xl font-bold mb-2 text-white">{event.title}</h2>
               <p className="text-xl text-gray-300 mb-4">{event.subtitle}</p>
               <div
@@ -235,9 +284,19 @@ export function NonTechnicalEvents() {
             onClick={() => handleEventSelect(event.id)}
           >
             <div className="text-center">
-              <div className="text-6xl mb-4" style={{ color: "#ffffff", textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}>
-                {event.emoji}
-              </div>
+              {event.isImage ? (
+                <div className="mb-4">
+                  <img
+                    src={event.emoji || "/placeholder.svg"}
+                    alt="Garena Logo"
+                    className="w-16 h-16 mx-auto object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="text-6xl mb-4" style={{ color: "#ffffff", textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}>
+                  {event.emoji}
+                </div>
+              )}
               <h4 className="text-2xl font-bold mb-2 text-white">{event.title}</h4>
               <p className="text-lg text-gray-300 mb-4">{event.subtitle}</p>
               <div
@@ -270,12 +329,18 @@ export function NonTechnicalEvents() {
         ))}
       </div>
 
-      <div className="mt-12 text-center">
-        <div className="glass-border-enhanced rounded-2xl p-6 max-w-2xl mx-auto">
-          <div className="text-6xl mb-4">🎮</div>
-          <h4 className="text-2xl font-bold mb-2 text-white">Consolex</h4>
-          <p className="text-lg text-gray-300 mb-4">PS4 console gaming – jump in and play</p>
-          <div className="text-lime-300 font-semibold">On the Spot Registration</div>
+      <div className="mt-16 max-w-4xl mx-auto">
+        <div className="glass-border-enhanced rounded-2xl p-8 text-center">
+          <div className="mb-6">
+            <img
+              src="/images/playstation-logo.jpeg"
+              alt="PlayStation Logo"
+              className="w-20 h-20 mx-auto mb-4 object-contain"
+            />
+          </div>
+          <h2 className="text-4xl font-bold mb-4 text-white">Consolex</h2>
+          <p className="text-xl text-gray-300 mb-6">PS4 console gaming – jump in and play</p>
+          <div className="text-lime-300 text-lg font-semibold">On the Spot Registration</div>
         </div>
       </div>
     </div>

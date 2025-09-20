@@ -50,7 +50,7 @@ Rules: No harmful prompts, no pre-built templates, no external aids during hallu
     ],
     skills: ["Prompt Engineering", "Critical Thinking", "Logic", "Web Skills"],
     time: "10:00",
-    location: "Tech Arena",
+    location: "AI&DS Block",
   },
   {
     id: "ctf-hide-seek",
@@ -65,18 +65,52 @@ Rules: No harmful prompts, no pre-built templates, no external aids during hallu
     ],
     skills: ["Cybersecurity Basics", "Command-Line Pro", "Forensics", "Problem Solving"],
     time: "11:15",
-    location: "Security Lab",
+    location: "AI&DS Block",
   },
   {
     id: "startup-pitch",
     title: "The Startup Pitch",
     emoji: "💡",
     shortDescription: "Pitch your own idea to judges! (Paper Presentation)",
-    fullDescription: "🚀 Pitch your own idea to judges! (Paper Presentation)",
+    fullDescription: `🚀 Pitch your own idea to judges! (Paper Presentation)
+
+📋 Student Paper Presentation – Guidelines & Rules
+
+✅ Eligibility
+• Open to undergraduate and postgraduate students from AI & DS and related Computing disciplines.
+• Individual or team participation (maximum four members) is allowed.
+
+📄 Paper Submission
+• Abstract must be submitted in IEEE format (maximum 250 words).
+• Full paper, if shortlisted, should not exceed 6 pages including references.
+• Submission deadline: [Insert Date]
+• Send submissions to: [Insert Symposium Email]
+
+🔍 Plagiarism & Originality
+• Papers must be original and unpublished.
+• Plagiarism above 10% will lead to disqualification.
+
+🎤 Presentation Format
+• Each team will be allotted 7 minutes for presentation and 3 minutes for Q&A.
+• PowerPoint slides are mandatory.
+• Presenters must bring their slides on a pen drive and have them on their Email and report 30 minutes before the session.
+
+⚖️ Evaluation Criteria
+• Innovation and relevance of the topic
+• Technical depth and clarity
+• Presentation skills
+• Response to questions
+
+🏆 Awards & Recognition
+• Best Paper Award with certificate and prize.
+
+📝 General Instructions
+• All participants must carry valid college ID cards.
+• Judges' decision will be final and binding.`,
     rounds: ["🎤 Present your problem + solution + impact.", "🧠 Impress with innovation, clarity, and confidence."],
     skills: ["Public Speaking", "Ideation", "Tech Communication", "Business Thinking"],
     time: "12:30",
-    location: "Pitch Arena",
+    location: "AI&DS Block",
   },
   {
     id: "truth-or-trap",
@@ -93,7 +127,7 @@ Rules: No harmful prompts, no pre-built templates, no external aids during hallu
     ],
     skills: ["AI Knowledge", "Quick Thinking", "Pattern Recognition", "Team Coordination"],
     time: "14:00",
-    location: "Quiz Arena",
+    location: "AI&DS Block",
   },
 ]
 

@@ -4,7 +4,11 @@ import LazyVideo from "./lazy-video"
 export function SymposiumHero() {
   const registerButton = (
     <Button asChild className="rounded-full bg-lime-400 px-8 py-3 text-black hover:bg-lime-300 text-lg font-semibold">
-      <a href="#registration" rel="noopener noreferrer">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfABpJ2k55QTnY7pMIBtiUm4BUZgAJ8_OyqGPJ2VhXpm1CzQg/viewform?usp=header"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Register Now
       </a>
     </Button>

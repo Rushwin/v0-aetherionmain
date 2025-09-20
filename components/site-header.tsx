@@ -4,15 +4,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Calendar, Users, FileText, Info } from "lucide-react"
+import { Menu, Calendar, Info } from "lucide-react"
+import { AboutModal } from "./about-modal"
 
 export function SiteHeader() {
   const links = [
     { href: "/", label: "Home", icon: Calendar },
     { href: "#schedule", label: "Schedule", icon: Calendar },
-    { href: "#speakers", label: "Speakers", icon: Users },
-    { href: "#registration", label: "Register", icon: FileText },
-    { href: "#about", label: "About", icon: Info },
   ]
 
   return (
@@ -40,12 +38,17 @@ export function SiteHeader() {
                 {l.label}
               </Link>
             ))}
+            <AboutModal>
+              <button className="hover:text-lime-300 transition-colors drop-shadow-sm">About</button>
+            </AboutModal>
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex">
             <Link
-              href="#registration"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfABpJ2k55QTnY7pMIBtiUm4BUZgAJ8_OyqGPJ2VhXpm1CzQg/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg px-6 py-2.5 text-black font-medium
                          transition-all hover:shadow-md hover:scale-[1.02]"
               style={{
@@ -100,12 +103,22 @@ export function SiteHeader() {
                       <span className="text-sm">{l.label}</span>
                     </Link>
                   ))}
+                  <AboutModal>
+                    <button className="flex items-center gap-3 px-4 py-3 hover:bg-gray-900 hover:text-lime-300 transition-colors w-full text-left">
+                      <span className="inline-flex items-center justify-center w-5 h-5 text-gray-400">
+                        <Info className="h-4 w-4" />
+                      </span>
+                      <span className="text-sm">About</span>
+                    </button>
+                  </AboutModal>
                 </nav>
 
                 {/* CTA Button at Bottom */}
                 <div className="mt-auto border-t border-gray-800 p-4">
                   <Link
-                    href="#registration"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfABpJ2k55QTnY7pMIBtiUm4BUZgAJ8_OyqGPJ2VhXpm1CzQg/viewform?usp=header"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full inline-flex items-center justify-center rounded-lg px-6 py-2.5 text-black font-medium
                                transition-all hover:shadow-md hover:scale-[1.02]"
                     style={{

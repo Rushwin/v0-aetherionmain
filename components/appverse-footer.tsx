@@ -10,7 +10,7 @@ interface FooterContent {
 
 const defaultContent: FooterContent = {
   tagline: "Thank you for being part of our journey. We look forward to seeing you at the next symposium!",
-  copyright: "© 2025 — Aetherion International Uk",
+  copyright: "© 2025 — Artificial Intelligence & Data Science",
 }
 
 export function AppverseFooter() {
