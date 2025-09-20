@@ -126,7 +126,7 @@ const defaultContent: ContentData = {
     subtitle: "Discover our unique approach to 3D animation",
   },
   footer: {
-    tagline: "Experience 3D animation like never before. We craft cinematic visuals for brands and products.",
+    tagline: "Thank you for being part of our journey. We look forward to seeing you at the next symposium!",
     copyright: "© 2025 — Skitbit International Uk",
   },
   about: {

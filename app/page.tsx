@@ -6,6 +6,7 @@ import { LogoMarquee } from "@/components/logo-marquee"
 import { SponsorMarquee } from "@/components/sponsor-marquee"
 import { RegistrationForm } from "@/components/registration-form"
 import { AppverseFooter } from "@/components/appverse-footer"
+import { SocialMediaSection } from "@/components/social-media-section"
 import Script from "next/script"
 
 // ✅ Force static generation for low TTFB
@@ -64,6 +65,7 @@ export default function Page() {
         <SiteHeader />
         <SymposiumHero />
         <EventSchedule />
+        <SocialMediaSection />
         <LogoMarquee />
         <SponsorMarquee />
         <RegistrationForm />
