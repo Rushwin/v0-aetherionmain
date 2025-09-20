@@ -20,7 +20,43 @@ export function NonTechnicalEvents() {
         "💥 Only 1 champion squad survives",
         "🏆 Winner takes all tournament",
       ],
-      skills: "Team Strategy, Quick Reflex, Communication",
+      skills: "Team Strategy, Quick Reflex, Communication, Problem-solving under pressure, Coordination",
+      fullDescription: `**Game Description:**
+Bomb Squad is an action-packed, fast-paced arena game where players throw "bombs" at each other, with the goal of eliminating the opposing team. The game is played in a designated arena with obstacles for cover, and the last team standing (or the team with the most players remaining when time runs out) wins.
+
+**Objective:**
+Eliminate the opposing team by throwing bombs to hit them. Players are out when they are hit by a bomb or are in the blast radius. The team that eliminates all opposing players or has the most players remaining at the end of the round wins.
+
+**Core Rules:**
+
+**Starting:** Players spawn at designated points with countdown before each round.
+
+**Throwing Bombs:** Bombs explode on impact or after set time, affecting players in blast radius. Can knock players back or off platforms.
+
+**Elimination:** Players eliminated if hit directly, caught in blast radius, or fall out of bounds.
+
+**Special Features:** 
+• Power-ups spawn for better bombs, extra bombs, or shields
+• Some bombs have special effects (freeze, stun, bigger explosions)
+• Arena hazards like pits and fire zones add strategy
+
+**Team Play:** Coordinate attacks, create traps, use communication for effective elimination strategies.
+
+**Victory Conditions:**
+• Elimination: First team to eliminate all opponents wins
+• Survival: Most remaining players when time runs out wins
+• Points-Based: Most eliminations/points across multiple rounds wins
+
+**Tournament Format:**
+• 8 teams participate in a knockout tournament
+• Quarters → Semis → Finals progression
+• Only 1 champion squad survives
+• Winner takes all tournament structure
+
+**Skills Required:**
+Team Strategy, Quick Reflex, Communication, Problem-solving under pressure, Coordination
+
+This event is designed to create an exciting, high-energy gaming experience that combines physical activity with strategic thinking, making it perfect for teams who enjoy action-packed challenges and working under pressure.`,
     },
     {
       id: 2,
@@ -68,12 +104,38 @@ export function NonTechnicalEvents() {
         "🔄 Drawing role rotates each round",
       ],
       skills: "Creativity, Abstract Thinking, Teamwork",
+      fullDescription: `**Event Description: Guess the Sketch (Blind Drawing)**
+
+"Guess the Sketch" is a chaotic and creative team event where communication and abstract thinking are key. Taking place from 18:30 to 20:00 in the Creative Studio, this blind drawing competition promises an evening of pure fun and hilarious misinterpretations.
+
+**How It Works:**
+The rules are simple: one person on each team is blindfolded and given a word to draw. With only their sense of touch and a vague idea of the canvas, they must create a sketch that their teammates can decipher. The rest of the team must then work together to guess the word based on the resulting doodle.
+
+**Game Format:**
+• One team member is blindfolded each round
+• Blindfolded player receives a word to draw
+• They must sketch using only touch and spatial awareness
+• Teammates observe the drawing process and final result
+• Team collaborates to guess the word from the sketch
+• Drawing role rotates each round ensuring everyone participates
+
+**Key Rules:**
+• No verbal hints from the drawer during sketching
+• Teammates can only guess after drawing is complete
+• Time limit applies for both drawing and guessing phases
+• All team members must take turns as the blindfolded artist
+
+**What Makes It Special:**
+This isn't about artistic talent; it's about making the most of a messy situation. The drawing role rotates each round, ensuring everyone gets a chance to test their communication and sketching skills. This event is perfect for those who enjoy a challenge and don't mind a little "creativity & chaos guaranteed!"
+
+Get ready to laugh as you try to turn a simple word into a masterpiece—or, more likely, a hilarious scribble. The event combines the challenge of blind drawing with team collaboration, creating memorable moments of creative chaos and unexpected artistic interpretations.`,
     },
     {
       id: 4,
       title: "IPL Auction",
       subtitle: "Cricket Team Building",
-      emoji: "🏏",
+      emoji: "/images/ipl-logo.jpeg",
+      isImage: true, // Flag to indicate this is an image instead of emoji
       time: "20:30 - 22:00",
       location: "AI&DS Block",
       description: "Build your dream cricket team!",
@@ -181,7 +243,13 @@ The franchise whose playing XI has the highest total credit score will be declar
                 <div className="mb-6">
                   <img
                     src={event.emoji || "/placeholder.svg"}
-                    alt="Garena Logo"
+                    alt={
+                      event.title === "IPL Auction"
+                        ? "IPL Logo"
+                        : event.title === "Free Fire"
+                          ? "Garena Logo"
+                          : "Event Logo"
+                    }
                     className="w-24 h-24 mx-auto object-contain"
                   />
                 </div>
@@ -288,8 +356,14 @@ The franchise whose playing XI has the highest total credit score will be declar
                 <div className="mb-4">
                   <img
                     src={event.emoji || "/placeholder.svg"}
-                    alt="Garena Logo"
-                    className="w-16 h-16 mx-auto object-contain"
+                    alt={
+                      event.title === "IPL Auction"
+                        ? "IPL Logo"
+                        : event.title === "Free Fire"
+                          ? "Garena Logo"
+                          : "Event Logo"
+                    }
+                    className="w-16 h-16 mx-auto mb-4 object-contain"
                   />
                 </div>
               ) : (
