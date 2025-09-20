@@ -57,11 +57,34 @@ Rules: No harmful prompts, no pre-built templates, no external aids during hallu
     title: "Mindmaze: CTF", // Simplified from "Mindmaze: Capture The Flag (CTF): Hide & Seek" to just "Mindmaze: CTF"
     emoji: "🕵",
     shortDescription: "Cybersecurity treasure hunt inside a server's file system.",
-    fullDescription: "🔎 Cybersecurity treasure hunt inside a server's file system.",
+    fullDescription: `🕵 Mindmaze: CTF – Capture The Flag Challenge
+
+🎯 Event Description:
+An engaging and competitive Capture The Flag (CTF) challenge designed for participants with diverse skill sets. This challenge offers six levels, each categorized under different skill domains to test participants' abilities in various cybersecurity areas.
+
+🏗️ Challenge Structure:
+6 Levels of Different Categories: The challenge is structured in six progressive levels, each focused on a unique aspect of cybersecurity. From basic puzzles to advanced tasks, each level is designed to test and enhance your logical thinking and problem-solving skills.
+
+🔧 Categories Include:
+• Web Exploitation: Delve into vulnerabilities found within web applications
+• Reverse Engineering: Break down programs and software to analyze their functions and uncover hidden secrets
+• Cryptography: Tackle puzzles that require knowledge of encryption and decryption methods to uncover the flags
+• Steganography: Search for hidden messages or data within images, files, or other media
+
+🎮 How the Game Works:
+• Resources: Participants will need their own laptop to participate in this challenge. No additional software or hardware is provided, so prepare your system for a series of problem-solving tasks across various platforms and formats
+• Objective: The goal is to be the first to solve all the labs and challenges, accumulating all 6 flags. Each solved challenge rewards you with a flag, and all flags are necessary to complete the challenge and win
+• Winning Criteria: The first person to solve all the challenges and collect all the flags will be crowned the winner
+
+⚠️ Important Details:
+• Logical thinking is key: This is not just about technical knowledge but also the ability to approach problems from multiple angles
+• Ensure you have all the required tools and environments set up on your laptop ahead of time to avoid delays
+• Collaboration is allowed, but the flag collection is an individual race!`,
     rounds: [
       "🏁 Start with a clue → find the flag (hidden text).",
       "🧩 Each flag unlocks the next level.",
-      "⚡ 7–10 levels with difficulty going from easy → hardcore.",
+      "⚡ 6 levels with categories: Web Exploitation, Reverse Engineering, Cryptography, Steganography.",
+      "🏆 First to collect all 6 flags wins the challenge.",
     ],
     skills: ["Cybersecurity Basics", "Command-Line Pro", "Forensics", "Problem Solving"],
     time: "11:15",
